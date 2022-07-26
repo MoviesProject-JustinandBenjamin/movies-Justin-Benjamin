@@ -5,8 +5,19 @@ export default function Navbar(props) {
 
     // everyone can see home
     let html = `
-        <nav>
-            <a class="jalopy-nav" href="/" data-link>Home</a>`;
+    <nav>
+        <a class="jalopy-nav" href="/" data-link>Home</a>`;
+    // <div className="dropdown">
+    //     <button className="dropbtn">Dropdown
+    //         <i className="fa fa-caret-down"></i>
+    //     </button>
+    //     <div className="dropdown-content">
+    //         <a href="#">Home</a>
+    //         <a href="#">About</a>
+    //         <a href="#">Login</a>
+    //     </div>
+    // </div>
+
 
     // everyone can see about
     html = html + `<a class="jalopy-nav" href="/about" data-link>About</a>`;
