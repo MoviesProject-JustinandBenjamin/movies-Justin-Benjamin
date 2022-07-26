@@ -12,16 +12,31 @@ export default function editPage(props) {
     <label for="year">Year</label>
     <select id="date-dropdown">
     </select><br>
-<!--    button selector or Genre types-->
-    <label for="genre-selector">Genre</label>
-    <input button selector to choose options for Genre types><br>
+<!--    check-box selector for Genre types-->
+    <label for="genre-selector">Genre:</label>
+    <input type="checkbox" id="Genre1" name="Genre1" value="Comedy">
+    <label for="Genre1">Comedy</label>
+    <input type="checkbox" id="Genre2" name="Genre2" value="Drama">
+    <label for="Genre2">Drama</label>
+    <input type="checkbox" id="Genre3" name="Genre3" value="Fantasy">
+    <label for="Genre3">Fantasy</label>
+    <input type="checkbox" id="Genre4" name="Genre4" value="Horror">
+    <label for="Genre4">Horror</label>
+    <input type="checkbox" id="Genre5" name="Genre5" value="Mystery">
+    <label for="Genre5">Mystery</label>
+    <input type="checkbox" id="Genre6" name="Genre6" value="Romance">
+    <label for="Genre6">Romance</label>
+    <input type="checkbox" id="Genre7" name="Genre7" value="Thriller">
+    <label for="Genre7">Thriller</label>
+    <input type="checkbox" id="Genre8" name="Genre8" value="Western">
+    <label for="Genre8">Western</label><br>
 <!--    Rating selector section-->
      <label>Rate</label>
     <input button selector to choose how many stars. up to ><br>
 <!--director field to be filled in-->
     <label for="directorname">Director</label>
     <input id="directorname" name="directorname" type="text" placeholder="Movie-director"><br>
-    <button>Reset</button> <button>Send</button>
+    <input type="reset" value="Reset" onclick="reset()"> <button>Send</button>
 </form> `;
 
 }
