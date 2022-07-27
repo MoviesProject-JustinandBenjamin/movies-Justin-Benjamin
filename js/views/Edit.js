@@ -32,12 +32,16 @@ export default function editPage(props) {
     <label for="Genre8">Western</label>
     <input type="checkbox" id="Genre9" name="Genre9" value="Action">
     <label for="Genre9">Action</label>
-    <input type="checkbox" id="Genre10" name="Genre10" value="">
-    <label for="genrename">Other</label>
-    <input id="genrename" name="genrename" type="text" placeholder="Genre"><br>
-<!--    Rating selector section-->
-     <label>Rate</label>
-    <input button selector to choose how many stars. up to ><br>
+    <input type="checkbox" id="Genre10" name="Genre10" value="Other">
+    <label for="Genre10">Other</label><br>
+<!--    Rating selector section-->  
+        <h2>Rating:</h2>
+<span class="fa fa-star" id="star1"></span>
+<span class="fa fa-star" id="star2"></span>
+<span class="fa fa-star" id="star3"></span>
+<span class="fa fa-star" id="star4"></span>
+<span class="fa fa-star" id="star5"></span>
+    <br>
 <!--director field to be filled in-->
     <label for="directorname">Director</label>
     <input id="directorname" name="directorname" type="text" placeholder="Movie-director"><br>
@@ -59,6 +63,46 @@ export function editPageEvents() {
   dateDropdown.add(dateOption);
   currentYear -= 1;
  }
-
-
+let stars = document.querySelectorAll(".fa-star");
+ for (let i = 0; i < stars.length; i++) {
+   stars[i].addEventListener("click", () => {
+    console.log((i + 1) + " click")
+   switch (i) {
+    case 0:
+     stars[0].classList.add("checked");
+     stars[1].classList.remove("checked");
+     stars[2].classList.remove("checked");
+     stars[3].classList.remove("checked");
+     stars[4].classList.remove("checked");
+     break;
+    case 1:
+     stars[0].classList.add("checked");
+     stars[1].classList.add("checked");
+     stars[2].classList.remove("checked");
+     stars[3].classList.remove("checked");
+     stars[4].classList.remove("checked");
+     break;
+    case 2:
+     stars[0].classList.add("checked");
+     stars[1].classList.add("checked");
+     stars[2].classList.add("checked");
+     stars[3].classList.remove("checked");
+     stars[4].classList.remove("checked");
+     break;
+    case 3:
+     stars[0].classList.add("checked");
+     stars[1].classList.add("checked");
+     stars[2].classList.add("checked");
+     stars[3].classList.add("checked");
+     stars[4].classList.remove("checked");
+     break;
+    case 4:
+     stars[0].classList.add("checked");
+     stars[1].classList.add("checked");
+     stars[2].classList.add("checked");
+     stars[3].classList.add("checked");
+     stars[4].classList.add("checked");
+     break;
+   }})}
+ console.log(stars);
 }

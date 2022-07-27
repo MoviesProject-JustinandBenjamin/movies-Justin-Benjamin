@@ -38,6 +38,10 @@ footer {
     margin: 10px;
     text-align: center;
 }
+/*Edit Page*/
 #edit-movie{
     display: block;
+}
+.checked {
+    color: orange;
 }
