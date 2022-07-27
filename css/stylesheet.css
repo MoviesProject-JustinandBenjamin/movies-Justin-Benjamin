@@ -13,7 +13,8 @@ html{
     max-width: 100vw;
 }
 footer {
-    position: absolute;
+    position: relative;
+    text-align: center;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
@@ -24,19 +25,26 @@ footer {
     border-style: solid;
     border-color: black;
     background-color: gray;
-    max-height: 40vh;
+    height: 38vh;
     min-width:15% ;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
 }
+.poster img{
+    height: 35vh;
+    width: 20vh;
+}
 .movie {
     display: inline-block;
-    background-color: brown;
-    width: 15%;
+    /*background-color: brown;*/
+    width: 20vw;
     height: 35vh;
     margin: 10px;
     text-align: center;
+}
+.name {
+    color: blue;
 }
 /*Edit Page*/
 #edit-movie{
@@ -44,4 +52,44 @@ footer {
 }
 .checked {
     color: orange;
+}
+
+
+
+
+.flip-card {
+    background-color: transparent;
+    height: 35vh;
+    width: 15vw;
+    border: 1px solid #f1f1f1;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
 }
