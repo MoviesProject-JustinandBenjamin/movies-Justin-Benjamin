@@ -20,7 +20,7 @@ export default function Navbar(props) {
 
 
     // everyone can see about
-    html = html + `<a class="jalopy-nav" href="/about" data-link>About</a>`;
+    html = html + `<a class="jalopy-nav" href="/recommend" data-link>Recommended</a>`;
 
     // only logged in can see user info and logout
     if(loggedIn) {
