@@ -23,13 +23,18 @@ export default function editPage(props) {
     <input type="checkbox" id="Genre4" name="Genre4" value="Horror">
     <label for="Genre4">Horror</label>
     <input type="checkbox" id="Genre5" name="Genre5" value="Mystery">
-    <label for="Genre5">Mystery</label>
+    <label for="Genre5">Mystery</label><br>
     <input type="checkbox" id="Genre6" name="Genre6" value="Romance">
     <label for="Genre6">Romance</label>
     <input type="checkbox" id="Genre7" name="Genre7" value="Thriller">
     <label for="Genre7">Thriller</label>
     <input type="checkbox" id="Genre8" name="Genre8" value="Western">
-    <label for="Genre8">Western</label><br>
+    <label for="Genre8">Western</label>
+    <input type="checkbox" id="Genre9" name="Genre9" value="Action">
+    <label for="Genre9">Action</label>
+    <input type="checkbox" id="Genre10" name="Genre10" value="">
+    <label for="genrename">Other</label>
+    <input id="genrename" name="genrename" type="text" placeholder="Genre"><br>
 <!--    Rating selector section-->
      <label>Rate</label>
     <input button selector to choose how many stars. up to ><br>
