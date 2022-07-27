@@ -1,5 +1,5 @@
 import Home, {HomeEvents} from "./views/Home.js";
-import About, {AboutEvents} from "./views/About.js";
+import Recomend, {RecomendEvents} from "./views/Recomend.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
 import Login from "./views/Login.js";
@@ -60,12 +60,12 @@ export default function router(URI) {
             title: 'User Info',
             viewEvent: UserEvents
         },
-        '/about': {
-            returnView: About,
+        '/recomend': {
+            returnView: Recomend,
             state: {},
-            uri: '/about',
-            title: 'About',
-            viewEvent: AboutEvents
+            uri: '/recomend',
+            title: 'Recomend pick',
+            viewEvent: RecomendEvents
         },
         '/error': {
             returnView: Error404,

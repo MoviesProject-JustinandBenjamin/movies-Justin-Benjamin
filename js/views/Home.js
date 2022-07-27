@@ -8,7 +8,7 @@ export default function Home(props) {
         <div class="gallery">
     `;
     console.log(props);
-    for (let i = 0; i < 75; i++) {
+    for (let i = 0; i < props.movies.length; i++) {
         html += `
         <div class="movie flip-card" xmlns="http://www.w3.org/1999/html">
             <div class="poster flip-card-inner">
@@ -17,7 +17,7 @@ export default function Home(props) {
             </div>
             <div class="flip-card-back">
                 <div class="name">
-                    <p>${props.movies[i].name}</p>
+                    <p><b>${props.movies[i].name}</b></p>
                     <p>genre: ${props.movies[i].genre}</p>
                     <p>year: ${props.movies[i].year}</p>
                     <p>director: ${props.movies[i].director}</p>
@@ -30,7 +30,7 @@ export default function Home(props) {
         `;
     }
     html += `</div><br><h1>Tv Shows</h1><div class="gallery">`;
-        for (let i = 0; i < 75; i++) {
+        for (let i = 0; i < props.tvShows.length; i++) {
             html += `
         <div class="movie flip-card">
             <div class="poster flip-card-inner">
@@ -55,7 +55,6 @@ export default function Home(props) {
     return html;
 }
 export function HomeEvents() {
-
 
 //     const user = getUser();
 //     if(!user) {

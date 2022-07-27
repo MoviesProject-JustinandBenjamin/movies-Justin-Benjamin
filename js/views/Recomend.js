@@ -1,6 +1,6 @@
 // import {showNotification} from "../messaging.js";
 
-export default function About(props) {
+export default function Recomend(props) {
     // language=HTML
     return `
 <header>
@@ -13,6 +13,6 @@ export default function About(props) {
 </main>
     `;
 }
-export function AboutEvents() {
+export function RecomendEvents() {
   
 }

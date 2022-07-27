@@ -43,8 +43,8 @@ footer {
     margin: 10px;
     text-align: center;
 }
-.name {
-    color: blue;
+.name p{
+    color: darkgreen;
 }
 /*Edit Page*/
 #edit-movie{
@@ -53,10 +53,6 @@ footer {
 .checked {
     color: orange;
 }
-
-
-
-
 .flip-card {
     background-color: transparent;
     height: 35vh;
@@ -92,4 +88,16 @@ footer {
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
+    overflow: hidden;
+}
+b:hover {
+    position: relative;
+    animation: slide 20s linear;
+
+}
+@keyframes slide {
+    0% { left: 0px;}
+    50% { left: -400px;}
+    75% {right: 200px;}
+    100% {right: 0px;}
 }
