@@ -7,6 +7,9 @@ import LoginEvent from "./auth.js";
 import Register, {RegisterEvent} from "./views/Register.js"
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
+import editPage, {editPageEvents} from "./views/Edit.js";
+
+
 
 /**
  * Returns the route object for a specific route based on the given URI
@@ -17,7 +20,14 @@ export default function router(URI) {
     const routes = {
         '/': {
             returnView: Home,
-            state: {},
+            state: {
+                movies: {
+                    url: "https://sleepy-stitch-script.glitch.me/movies",
+                },
+                tvShows: {
+                    url: "https://sleepy-stitch-script.glitch.me/tvShows"
+                }
+            },
             uri: '/',
             title: 'Home',
             viewEvent: HomeEvents
@@ -61,13 +71,20 @@ export default function router(URI) {
             returnView: Error404,
             state: {},
             uri: location.pathname,
-            title: ' ERROR',
+            title: ' ERROR'
         },
         '/loading': {
             returnView: Loading,
             state: {},
             uri: location.pathname,
-            title: 'Loading...',
+            title: 'Loading...'
+        },
+        '/edit': {
+            returnView: editPage,
+            state: {},
+            uri: '/edit',
+            title: 'Edit Movie Page',
+            viewEvent: editPageEvents
         }
     };
     // if we see a URI with index.html then interpret that as a route for /
