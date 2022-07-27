@@ -13,7 +13,7 @@ export default function Navbar(props) {
     //     </button>
     //     <div className="dropdown-content">
     //         <a href="#">Home</a>
-    //         <a href="#">About</a>
+    //         <a href="#">Recommend</a>
     //         <a href="#">Login</a>
     //     </div>
     // </div>
