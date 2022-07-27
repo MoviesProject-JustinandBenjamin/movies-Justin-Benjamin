@@ -10,7 +10,7 @@ export default function Home(props) {
     console.log(props);
     for (let i = 0; i < props.movies.length; i++) {
         html += `
-        <div class="movie flip-card" xmlns="http://www.w3.org/1999/html">
+        <div class="movie flip-card">
             <div class="poster flip-card-inner">
             <div class="flip-card-front">
                 <img src="../../Database Files/covers/${props.movies[i].id}.jpg" alt="${props.movies[i].name}">
