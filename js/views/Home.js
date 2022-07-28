@@ -1,5 +1,7 @@
 // import {showNotification} from "../messaging.js";
 // import {getUser} from "../auth.js";
+import createView from "../createView.js";
+
 const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 export default function Home(props) {
     let html =  `
@@ -23,7 +25,8 @@ export default function Home(props) {
                     <p>director: ${props.movies[i].director}</p>
                     <p>rating: ${props.movies[i].rating}</p>
                 </div>
-                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>
+<!--                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>-->
+                <button class="delete-btn" data-id="${props.movies[i].name}">Delete</button>
             </div>
         </div>
         </div>
@@ -45,7 +48,8 @@ export default function Home(props) {
                     <p>Director: ${props.tvShows[i].director}</p>
                     <p>Rating: ${props.tvShows[i].rating}</p>
                 </div>
-                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>
+<!--                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>-->
+                <button class="delete-btn" data-id="${props.tvShows[i].name}">Delete</button>
             </div>
         </div>
         </div>
@@ -55,11 +59,13 @@ export default function Home(props) {
     return html;
 }
 export function HomeEvents() {
+    let delBtn = document.querySelectorAll(".delete-btn");
+    for (let i = 0; i < delBtn.length; i++) {
+        delBtn[i].addEventListener("click", () => {
+            // console.log(delBtn[i].parentElement.parentElement.parentElement);
+            let mov = delBtn[i].parentElement.parentElement.parentElement;
+                mov.style.display = "none";
+        });
+    }
 
-//     const user = getUser();
-//     if(!user) {
-//         // showNotification("Welcome visitor", "secondary");
-//     } else {
-//         // showNotification("Welcome " + user.userName, "info");
-//     }
 }

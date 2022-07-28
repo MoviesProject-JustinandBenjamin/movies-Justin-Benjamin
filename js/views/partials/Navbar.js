@@ -5,33 +5,26 @@ export default function Navbar(props) {
 
     // everyone can see home
     let html = `
-    <nav>
-        <a class="jalopy-nav" href="/" data-link>Home</a>`;
-    // <div className="dropdown">
-    //     <button className="dropbtn">Dropdown
-    //         <i className="fa fa-caret-down"></i>
-    //     </button>
-    //     <div className="dropdown-content">
-    //         <a href="#">Home</a>
-    //         <a href="#">Recommend</a>
-    //         <a href="#">Login</a>
-    //     </div>
-    // </div>
-
-
-    // everyone can see about
-    html = html + `<a class="jalopy-nav" href="/about" data-link>About</a>`;
-
-    // only logged in can see user info and logout
-    if(loggedIn) {
-        html = html + `<a class="jalopy-nav" href="/users" data-link>User Info</a>
-            <a href="/logout" data-link>Logout</a>`;
-    } else {
-        // if not logged in, can see login and register
-        html = html + `<a class="jalopy-nav" href="/login" data-link>Login</a>
-        <a class="jalopy-nav" href="/register" data-link>Register</a>`;
-    }
-
+   <nav>
+      <div class="navbar">
+        <div class="container nav-container box" >
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="menu-items">
+            <li><a href="/" data-link>Home</a></li>
+            <li><a href="/recommend" data-link>Recommend</a></li>
+            <li><a href="/edit" data-link>Edit</a></li>
+            <li><a href="/users" data-link>Portfolio</a></li>
+            <li><a href="/logout" data-link>Logout</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>`;
     html = html + `</nav>`;
     return html;
 }
+
