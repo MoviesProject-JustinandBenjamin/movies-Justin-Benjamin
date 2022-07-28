@@ -4,17 +4,8 @@ import {getHeaders, isLoggedIn} from "../auth.js";
 const BASE_URI = `${BACKEND_HOST}/api/users/create`;
 
 export default function Register(props) {
-    // language=HTML
     return `
-    <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <title>Register</title>
-            </head>
-            <body>
                 <h1>Register</h1>
-        
                 <form id="register-form">
                     <label for="username">Username</label>
                     <input id="username" name="username" type="text"/>
