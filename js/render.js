@@ -18,4 +18,10 @@ export default function render(props, route) {
     if (route.viewEvent){
         route.viewEvent();
     }
+
+    // let menuBtn = document.getElementById("showMenu");
+    // menuBtn.addEventListener("click", function(){
+    //     let Menu = document.getElementById("menuChoose");
+    //     Menu.classList.toggle("hidden");
+    // });
 }

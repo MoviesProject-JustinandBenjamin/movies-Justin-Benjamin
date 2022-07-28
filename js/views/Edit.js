@@ -2,16 +2,16 @@
 
 export default function editPage(props) {
  return `
- <form id="edit-movie">
-    <h3>Edit Movie</h3>
+<div class="container-fluid cont34">
+    <form id="edit-movie">
+        <h3>Edit Movie</h3>
 <!--    make each field for the edit form-->
 <!--    Make each field inactive until selected with a check-box-->
-    <label for="moviename">Name</label>
-    <input id="moviename" name="moviename" type="text" placeholder="Movie-name"><br>
+        <label for="moviename">Name</label>
+        <input id="moviename" name="moviename" type="text" placeholder="Movie-name"><br>
 <!--   drop-down menu for year selection-->
-    <label for="year">Year</label>
-    <select id="date-dropdown">
-    </select><br>
+        <label for="year">Year</label>
+        <select id="date-dropdown"></select><br>
 <!--    check-box selector for Genre types-->
     <label for="genre-selector">Genre:</label>
     <input type="checkbox" id="Genre1" name="Genre1" value="Comedy">
@@ -34,7 +34,6 @@ export default function editPage(props) {
     <label for="Genre9">Action</label>
     <input type="checkbox" id="Genre10" name="Genre10" value="Other">
     <label for="Genre10">Other</label><br>
-<!--    Rating selector section-->  
         <h2>Rating:</h2>
 <span class="fa fa-star" id="star1"></span>
 <span class="fa fa-star" id="star2"></span>
@@ -43,17 +42,23 @@ export default function editPage(props) {
 <span class="fa fa-star" id="star5"></span>
     <br>
 <!--director field to be filled in-->
-    <label for="directorname">Director</label>
-    <input id="directorname" name="directorname" type="text" placeholder="Movie-director"><br>
-    <input type="reset" value="Reset" onclick="reset()"> <button>Send</button>
-</form> `;
-
+        <label for="directorname">Director</label>
+        <input id="directorname" name="directorname" type="text" placeholder="Movie-director"><br>        
+<!--    Rating selector section-->  
+        <h2>Rating:</h2>
+        <span class="fa fa-star" id="star1"></span>
+        <span class="fa fa-star" id="star2"></span>
+        <span class="fa fa-star" id="star3"></span>
+        <span class="fa fa-star" id="star4"></span>
+        <span class="fa fa-star" id="star5"></span><br>
+        <button id="infoSend">Send</button>
+    </form>
+</div> `;
 }
 
 
 export function editPageEvents() {
  let dateDropdown = document.getElementById('date-dropdown');
-
  let currentYear = new Date().getFullYear();
  let earliestYear = 1942;
  while (currentYear >= earliestYear) {
