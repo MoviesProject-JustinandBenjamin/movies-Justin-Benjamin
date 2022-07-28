@@ -4,28 +4,29 @@ import {getHeaders, isLoggedIn} from "../auth.js";
 const BASE_URI = `${BACKEND_HOST}/api/users/create`;
 
 export default function Register(props) {
-    // language=HTML
-    return `
-    <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <title>Register</title>
-            </head>
-            <body>
-                <h1>Register</h1>
-        
+    return `<div class='register'>
+                <h1>Register Form</h1>
                 <form id="register-form">
                     <label for="username">Username</label>
-                    <input id="username" name="username" type="text"/>
+                    <input id="username" name="username" type="text" placeholder="Username">
+                    <label for="firstname">First name</label>
+                    <input id="fisrtName" name="firstname" type="text" placeholder="First Name">
+                    <label for="lastname">Username</label>
+                    <input id="lastName" name="lastname" type="text" placeholder="Last Name">
+                    <br>
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email">
+                    <input id="email" name="email" type="email" placeholder="Email">
+                    <label for="dob">Date of Birth</label>
+                    <input id="dob" name="dob" type="date" min="1950-01-01">
+                    <br>
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="password"/>
+                    <input id="password" name="password" type="password" placeholder="Password">
+                    <label for="cPassword">Confirm Password</label>
+                    <input id="cPassword" name="cPassword" type="password" placeholder="Password">
+                    <br>
                     <button id="register-btn" type="button">Register</button>
                 </form>
-            </body>
-        </html>
+            </div>
 `;
 }
 
