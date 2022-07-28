@@ -112,9 +112,8 @@ b:hover {
 }
   @keyframes slide {
     0% { left: 0px;}
-    50% { left: -400px;}
-    75% {right: 200px;}
-    100% {right: 0px;}
+    100% { left: -400px;}
+  
 }
   @keyframes hover {
     0% {
@@ -138,5 +137,23 @@ b:hover {
   
   
   }
-  
+  .register {
+    display: block;
+    width: 50vw;
+    height: 50vh;
+    background-color: antiquewhite;
+    text-align: center;
+    border: solid 1px black;
+    margin: auto;
+  }
+  .register h1, .register label {
+    padding: 15px;
+    text-align: center;
+  }
+  .register button{
+    position: relative;
+    bottom: -180px;
+    left: calc(50% - 80px);
+
+  }
   
