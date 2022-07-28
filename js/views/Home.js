@@ -25,7 +25,6 @@ export default function Home(props) {
                     <p>director: ${props.movies[i].director}</p>
                     <p>rating: ${props.movies[i].rating}</p>
                 </div>
-<!--                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>-->
                 <button class="delete-btn" data-id="${props.movies[i].name}">Delete</button>
             </div>
         </div>
@@ -48,7 +47,6 @@ export default function Home(props) {
                     <p>Director: ${props.tvShows[i].director}</p>
                     <p>Rating: ${props.tvShows[i].rating}</p>
                 </div>
-<!--                <div class="movie-footer"><a href="/edit" data-link>Edit</a></div>-->
                 <button class="delete-btn" data-id="${props.tvShows[i].name}">Delete</button>
             </div>
         </div>
@@ -67,5 +65,10 @@ export function HomeEvents() {
                 mov.style.display = "none";
         });
     }
-
+//     const user = getUser();
+//     if(!user) {
+//         // showNotification("Welcome visitor", "secondary");
+//     } else {
+//         // showNotification("Welcome " + user.userName, "info");
+//     
 }
